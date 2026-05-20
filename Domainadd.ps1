@@ -22,4 +22,4 @@ Configure-SMRemoting.exe -Enable
  
  
 # Join VM to the domain
-Add-Computer -DomainName "prod002.apteancloud.local" -Credential $cred -Force -Restart
+Add-Computer -DomainName "domain.cloud.local" -Credential $cred -Force -Restart
