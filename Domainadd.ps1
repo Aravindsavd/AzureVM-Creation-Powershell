@@ -1,7 +1,8 @@
-﻿$domainUsername = "aravind.s"
+$domainname = ""
+$domainUsername = "avds"
 $domainPassword =  ""
 $securePass = ConvertTo-SecureString $domainPassword -AsPlainText -Force
-$cred = New-Object System.Management.Automation.PSCredential ("prod002\$domainUsername", $securePass)
+$cred = New-Object System.Management.Automation.PSCredential ("$domainname\$domainUsername", $securePass)
  
  
 #Disable IE Enhanced Security Configuration (IE ESC)
