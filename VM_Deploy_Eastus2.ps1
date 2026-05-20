@@ -12,11 +12,11 @@ $clientnumber = Read-Host "Enter the Client number"
 $storageaccountneeded = Read-Host "Do you need to created a Storage Account? (Yes/No)"
 
 # Resource Group and VNet Details
-$resourceGroupName = "rg-$region-prd-pgn"
-$Vnet = "vnet-$region-prd-pgn"
-$subnetname = "snet-$region-prd-pgn-$subnetname"
+$resourceGroupName = "rg-$region-prd"
+$Vnet = "vnet-$region-prd"
+$subnetname = "snet-$region-prd-$subnetname"
 $VMSize = "Standard_B4ms"
-$storageAccountName = "strg$region" + "prdpgn$clientnumber"
+$storageAccountName = "strg$region" + "prd$clientnumber"
 $publicIPname = "$computerName-PIP"
 $nicname = "$computerName-NIC"
 $securityType = "Standard"
@@ -29,9 +29,9 @@ $tagValue3 = "Paragon-US"
 $tags = @{$tagKey1 = $tagValue1; "APT-Customer" = $tagValue2; "Patching Mode" = $tagValue3}
 
 # ASG and NSG Details
-$asg1 = "asg-$region-prd-pgn-rds-session-host-servers"
-$asg2 = "asg-$region-prd-pgn-aptean-ips"
-$asg3 = "asg-$region-prd-pgn-dc-authentication"
+$asg1 = "asg-$region-prd-rds-session-host-servers"
+$asg2 = "asg-$region-prd-ips"
+$asg3 = "asg-$region-prd-dc"
 
 
 # Fetch Existing Resources
